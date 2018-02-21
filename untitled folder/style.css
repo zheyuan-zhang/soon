@@ -1,0 +1,1264 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+
+body{
+	background-color: rgba(0, 0, 0, .15);
+
+}	
+
+
+
+div{
+	background-color: blue;
+	border: 10px;
+	border-color: red;
+	height: 200px;
+	width: 200px;
+	margin: 0px;
+	float: left;
+
+}
+p{
+	float: left;
+}
+
+a{
+	float: left;
+	margin-right: 30px;
+
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+.topbar{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background-color: white;
+	border: 0px solid green;
+	height: 10vh;
+	width: 100vw;
+
+}
+
+h1{
+	float: left;
+
+
+}
+
+#h-title
+  {
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-size: 35px;
+	font-weight: bold;
+	
+
+}
+
+.h1-1{
+	left: 35vw;
+	padding-top: 15px;
+}
+
+.h1-2{
+	left: 45vw;
+	padding-top: 15px;
+}
+
+.left{
+	background-color: white;
+	position: relative;
+	width: 20vw;
+	height: 90vh;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 60vh;
+
+}
+
+.manu{
+	background-color: blue;
+	position: relative;
+	width: 60vw;
+	height: 60vh;
+}
+
+.manu:after{
+	content: "";
+    display: table;
+    clear: both;
+}
+
+
+.options{
+	padding: 15px;
+	font-size: 25px;
+	color: white;
+
+}
+
+
+.right{
+	background-color: white;
+	position: relative;
+	width: 20vw;
+	height: 90vh;
+}
+
+  .quotes{
+  	display: none;
+  	position: relative;
+  	font-size: 20px;
+  	top: 20px;
+  	margin: auto;
+  	text-align: center;
+  }
+
+
+.title{
+	clear: both;
+}
+
+.discription{
+	padding-top: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	 font-size: 15px;
+	
+}
+
+.discription2{
+	padding-top: 25px;
+	padding-left: 15px;
+	 font-size: 20px;
+	
+}
+
+#draggablediv {
+    padding: 10px;
+    background-color: white;
+    color: blue;
+    width: 440px;
+    height: 200px;
+    box-shadow: 0px 5px 20px rgba(0,0,255,.8);
+    left: 30%;
+    top: 30%;
+    z-index: 2000;
+    text-align: left;
+    position: absolute;  
+    border: 8px solid blue;
+    border-top: 20px solid blue;
+}
+
+#runthefile{
+	padding: 10px;
+    background-color: white;
+    color: black;
+    width: 350px;
+    height: 170px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,.6);
+    left: 50%;
+    top: 15%;
+    z-index: 2100;
+    text-align: left;
+    position: absolute;  
+    border: 8px solid black;
+    border-top: 20px solid black;
+    display: block;
+   
+    
+}
+
+button{
+	position: relative;
+	clear: both;
+	top: 80px;
+	left:-10px;
+	font-size: 11px;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 3px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+
+
+.dragme{
+	
+	cursor: move;
+	position: relative;
+	
+
+	
+}
+
+#bkimg{
+
+	width: 100vw;
+	height: auto;
+	z-index: 999;
+	display: none;
+	top: -300px;
+	left: 0px;
+	position: fixed;
+	box-shadow: 0px 0px 10px rgba(0,0,255,0);
+	background-color: rgb(255,255,255);
+}
+
+img{
+	margin: 10px;
+	float: left;
+	height: 250px;
+	width: auto;
+	/*box-shadow: 0px 0px 10px rgba(0,0,255,.3)*/
+
+	
+	
+}
+
+
+#img{
+	z-index: 1000;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100vh;
+	width: 100vw;
+	background-color: transparent;
+	display: none;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes appear {
+	0%{opacity: 1;}
+    2%{opacity: 0;}
+    5%{opacity: 1}
+    100%{opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes appear {
+	0%{opacity: 1;}
+    2%{opacity: 0;}
+    5%{opacity: 1}
+    100%{opacity: 1;}
+}
+
+#img1{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img2{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img3{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img4{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 9s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img5{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 12s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img6{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 15s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img7{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 18s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img8{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 21s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img9{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 24s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img10{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 27s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img11{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 30s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img12{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 33s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img13{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 36s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img14{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 39s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img15{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 42s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img16{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 45s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#window{
+	width: 450px;
+    height: auto;
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 48s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+
+}
+
+
+#window1{
+   width: 450px;
+   height: auto;
+   	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 51s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+
+ }
+
+ #window2{
+   width: 450px;
+   height: auto;
+   	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 54s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+ }
+
+ #img20{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 57s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img21{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 60s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img22{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 63s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img23{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 66s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img24{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 69s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img25{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 72s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img26{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 75s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#window3{
+	width: 450px;
+    height: auto;
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 78s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+
+}
+
+
+#window4{
+   width: 450px;
+   height: auto;
+   	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 81s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+
+ }
+
+ #window5{
+   width: 450px;
+   height: auto;
+   	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 84s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+ }
+
+ #img27{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 87s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img28{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 90s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img29{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 93s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img30{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 96s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img31{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 99s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img32{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 102s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img33{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 105s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img34{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 108s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img35{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 111s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img36{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 114s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img37{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 117s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#img38{
+	-webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-delay: 120s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+
+/*.container{
+   background-color: transparent;
+}
+
+.container:hover .overlay{
+    opacity: 1;
+}
+
+.overlay{
+  position: relative;
+  float: left;
+  top: 10px;
+  left: 100px;
+  width: 30vw;
+  height: 100vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: transparent;
+}*/
+
+ .text{
+ 	position: fixed;
+    top: 50px;
+    /*left: 10px;*/
+    width: 20vw;
+    height: 40vh;
+    text-align: left;
+    background-color: transparent;
+    margin-top: 0px;
+    font-size: 30px;
+    padding-top: 10px;
+    /*border: 5px solid pink;*/
+      /*transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+*/
+ }
+
+
+#t1{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+}
+
+#t2{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t3{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t4{
+color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+    
+}
+
+#t5{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+    
+
+}
+
+#t6{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t7{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t8{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t9{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t10{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t11{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t12{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t13{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+
+#t14{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t15{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t16{
+	color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+
+}
+
+#t17{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t18{
+	color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t19{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t20{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#p1{
+    color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+    text-align: right;
+    float: right;
+    left: 79vw;
+
+}
+
+#p2{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p3{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p4{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+
+#p5{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p6{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+    text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p7{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+
+#p8{
+    color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+    text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p9{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+
+#p13{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+
+#p12{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p11{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+
+#t23{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+
+
+#t25{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t26{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t21{
+	color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t29{
+    color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+}
+
+#t30{
+	color: red;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px blue;
+
+
+}
+
+#p23{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p22{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#p21{
+        color: blue;
+    z-index: 2100;
+    background-color: rgb(0,0,255,.5);
+    display: none;
+    text-shadow: 1px 1px 0px red;
+        text-align: right;
+    float: right;
+    left: 79vw;
+}
+
+#info {
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+.caption-background {
+    height: 200px;
+    background: blue;
+}
+.hidden {
+    display: none;
+}
+
+@media print{
+  
+  
+  /*div { float: none !important; }*/
+
+	#draggablediv{
+
+		position: fixed;
+		top: 620px;
+		left: 150px;
+		margin: auto;
+        /*width: 50%;*/
+        width: 520px;
+        height: 250px;
+        border: 8px solid blue;
+    border-top: 20px solid blue;
+
+	}
+
+	.discription{
+	  float: left;
+	  padding-top: 17px;
+	   padding-left: 10px;
+	   font-size: 20px;
+
+		
+	}
+
+	#h-title{
+		/*position: fixed;*/
+	 font-size: 50px;
+	 padding-top: 7px;
+	   padding-left: 10px;
+	}
+
+	#img{
+		position: relative;
+		display: block;
+		float: none;
+	}
+
+  img{
+  	position: relative;
+  	float: none !important;
+	display: block;
+  	page-break-after: always;
+    /*page-break-before: always;*/
+    page-break-inside: avoid;
+    margin: auto;
+    width: 58%;
+    height: auto;
+    padding-top: 160px;
+    opacity: 1;
+    /*border: 2px solid red;*/
+
+  }
+
+ 
+
+  .quotes{
+  	padding-top: 20px;
+  	float: none;
+  	display: block;
+  	z-index: 1000;
+  	font-size: 38px;
+  	font-weight: bold;
+  	padding-right: 55px;
+  	padding-left: 55px;
+  	/*border: 3px solid red;*/
+  	/*page-break-after: always;
+    page-break-inside: avoid;*/
+  }
+
+  #bkimg{
+  	opacity: 0;
+  }
+
+
+ .text{
+ 	font-size: 17px;
+ 	font-weight: bold;
+ 	top: 200px;
+ }
+
+ @-webkit-keyframes appear {
+	0%{opacity: 1;}
+    5%{opacity: 1}
+    100%{opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes appear {
+	0%{opacity: 1;}
+    5%{opacity: 1}
+    100%{opacity: 1;}
+}
+}
+
+

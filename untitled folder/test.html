@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <style type="text/css">
+        .floatingLeft {
+   float: left;
+}
+    </style>
+</head>
+<body>
+<img class="floatingLeft" src="throbber/1.gif" alt="rotating image" width="400" height="auto" id="rotator">
+
+<script type="text/javascript">
+(function() {
+    var rotator = document.getElementById('rotator');  // change to match image ID
+
+    var imageDir = 'throbber/';
+    // change to match images folder
+
+    var delayInSeconds = 3;                            // set number of seconds delay
+
+    // list image names
+
+    var images = ['2.gif', '3.gif', '4.gif', '1.gif'];
+
+ 
+    // don't change below this line
+
+    var num = 0;
+
+    var changeImage = function() {
+
+        var len = images.length;
+
+        rotator.src = imageDir + images[num++];
+
+        if (num == len) {
+
+            num = 0;
+
+        }
+
+    };
+
+    setInterval(changeImage, delayInSeconds * 1000);
+})();
+
+</script>
+
+</body>
+</html>
